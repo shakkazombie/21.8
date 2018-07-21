@@ -1,0 +1,26 @@
+{
+  "name": "21.8",
+  "version": "1.0.0",
+  "description": "MongoDB - heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "shakkazombie",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.2.4"
+  },
+  "devDependencies": {
+    "node": "^10.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakkazombie/21.8.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shakkazombie/21.8/issues"
+  },
+  "homepage": "https://github.com/shakkazombie/21.8#readme"
+}
