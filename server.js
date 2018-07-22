@@ -80,15 +80,15 @@ const findAllUsers = function () {
         if (err) throw err;
         console.log('Actual database records are ' + res);
     });
-}
+};
 
 const findSpecificRecord = function () {
     // find specific record
     return User.find({ username: 'Kenny_the_boy' }, function (err, res) {
         if (err) throw err;
         console.log('Record you are looking for is ' + res);
-    })
-}
+    });
+};
 
 const updadeUserPassword = function () {
     // update user password
@@ -102,9 +102,9 @@ const updadeUserPassword = function () {
                 if (err) throw err;
 
                 console.log('Uzytkownik ' + user.name + ' zostal pomyslnie zaktualizowany');
-            })
-        })
-}
+            });
+        });
+};
 
 const updateUsername = function () {
     // update username
@@ -112,8 +112,8 @@ const updateUsername = function () {
         if (err) throw err;
 
         console.log('Nazwa uzytkownika po aktualizacji to ' + user.username);
-    })
-}
+    });
+};
 
 const findMarkAndDelete = function () {
     // find specific user and delete
@@ -122,8 +122,8 @@ const findMarkAndDelete = function () {
             return user.remove(function () {
                 console.log('User successfully deleted');
             });
-        })
-}
+        });
+};
 
 const findKennyAndDelete = function () {
     // find specific user and delete
@@ -133,7 +133,7 @@ const findKennyAndDelete = function () {
                 console.log('User successfully deleted');
             });
         });
-}
+};
 
 const findBennyAndRemove = function () {
     // find specific user and delete
@@ -143,7 +143,7 @@ const findBennyAndRemove = function () {
                 console.log('User successfully deleted');
             });
         });
-}
+};
 
 Promise.all([kenny.save(), mark.save(), benny.save()])
     .then(findAllUsers)
@@ -153,4 +153,4 @@ Promise.all([kenny.save(), mark.save(), benny.save()])
     .then(findMarkAndDelete)
     .then(findKennyAndDelete)
     .then(findBennyAndRemove)
-    .catch(console.log.bind(console))
+    .catch(console.log.bind(console));
